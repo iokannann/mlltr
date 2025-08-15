@@ -21,6 +21,13 @@ def enviar():
         print(f"O usuário digitou: {valor_do_input}")
 
         return redirect(url_for('index'))
+    
+@app.route('/ver-dados')
+def ver_dados():
+    conn = get_db_connection()
+    dados = conn.execute('SELECT * FROM dados').fetchall()
+    conn.close()
+    return render_template('dados.html', dados=dados)
 
 if __name__ == '__main__':
     app.run(debug=True)
