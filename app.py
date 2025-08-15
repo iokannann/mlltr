@@ -3,6 +3,8 @@ from database import init_db, get_db_connection
 
 app = Flask(__name__)
 
+init_db()
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -21,5 +23,4 @@ def enviar():
         return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    init_db()
     app.run(debug=True)
