@@ -22,7 +22,7 @@ def enviar():
 
         return redirect(url_for('index'))
     
-@app.route('/ver-dados')
+@app.route('/dados')
 def ver_dados():
     conn = get_db_connection()
     dados = conn.execute('SELECT * FROM dados').fetchall()
