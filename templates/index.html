@@ -1,3 +1,10 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Meu site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
 <div class="container">
     <h1 class="texto-central">Insira algo aqui</h1>
     <form action="/enviar" method="post">
@@ -6,9 +13,3 @@
     </form>
 </div>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Meu site</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-</head>
