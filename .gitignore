@@ -214,8 +214,7 @@ __pycache__/
 .venv/
 .env
 
-# Banco de dados
-database.db
-
 # Node.js
 node_modules/
+
+fazer.txt
