@@ -1,8 +1,8 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 from database import init_db, get_db_connection
 
 app = Flask(__name__)
-
 init_db()
 
 @app.route('/')
@@ -11,12 +11,16 @@ def index():
 
 @app.route('/enviar', methods=['POST'])
 def enviar():
-    if request.method == 'POST':
-        valor_do_input = request.form.get('meu_input')
-        conn = get_db_connection()
-        conn.execute('INSERT INTO dados (valor) VALUES (?)', (valor_do_input,))
-        conn.commit()
-        conn.close()
+        if request.method == 'POST':
+             valor_do_input = request.form['meu_input']
+             NOME_SECRETO = os.environ.get('NOME_SECRETO', 'Mariana')
+             if valor_do_input == NOME_SECRETO:
+                  return redirect(url_for('secret'))
+             else:
+                  conn = get_db_connection()
+                  conn.execute('INSERT INTO dados (valor) VALUES (?)', (valor_do_input,))
+                  conn.commit()
+                  conn.close()
 
         print(f"O usuário digitou: {valor_do_input}")
 
