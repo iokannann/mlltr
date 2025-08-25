@@ -1,8 +1,12 @@
 body {
-    background-color: #2f2a2a;
-    padding: 20px;
-    border-radius: 5px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  margin: 0; 
+  background-color: #252424; 
 }
+
 
 .container {
     text-align: center; 
