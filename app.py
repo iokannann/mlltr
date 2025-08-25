@@ -22,6 +22,10 @@ def enviar():
 
         return redirect(url_for('index'))
     
+@app.route("/secret")
+def secret():
+    return render_template("secret.html")
+    
 @app.route('/dados')
 def ver_dados():
     conn = get_db_connection()
