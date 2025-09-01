@@ -13,7 +13,7 @@ def index():
 def enviar():
         if request.method == 'POST':
              valor_do_input = request.form['meu_input']
-             NOME_SECRETO = os.environ.get('NOME_SECRETO', '')
+             NOME_SECRETO = os.environ.get('NOME_SECRETO', 'ikn')
              if valor_do_input == NOME_SECRETO:
                   return redirect(url_for('secret'))
              else:
