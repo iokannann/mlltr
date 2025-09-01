@@ -13,3 +13,9 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ffffff;
 }
+
+
+
+body.secret {
+    background-color: #370a0a;
+}
