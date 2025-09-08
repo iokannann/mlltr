@@ -14,8 +14,23 @@ body {
     color: #ffffff;
 }
 
-
+body.second {
+    background-color: #0a3d37;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#0a3d37;
+}
 
 body.secret {
     background-color: #370a0a;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#370a0a;
+}
+
+body.dados {
+    background-color: #1a1a2e;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color:#e94560;
 }
