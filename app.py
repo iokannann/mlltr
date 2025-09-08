@@ -16,14 +16,8 @@ def enviar():
              NOME_SECRETO = os.environ.get('NOME_SECRETO', 'ikn')
              if valor_do_input == NOME_SECRETO:
                   return redirect(url_for('secret'))
-             if valor_do_input == '':
-                  return redirect(url_for('second'))
              else:
-                  conn = get_db_connection()
-                  conn.execute('INSERT INTO dados (valor) VALUES (?)', (valor_do_input,))
-                  conn.commit()
-                  conn.close()
-
+                    return redirect(url_for('second'))
         print(f"O usuário digitou: {valor_do_input}")
 
         return redirect(url_for('index'))
