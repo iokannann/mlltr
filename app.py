@@ -25,6 +25,10 @@ def enviar():
 @app.route("/secret")
 def secret():
     return render_template("secret.html")
+
+@app.route("/second")
+def second():
+    return render_template("second.html")
     
 @app.route('/dados')
 def ver_dados():
