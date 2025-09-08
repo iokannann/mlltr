@@ -10,7 +10,7 @@ def init_db():
     conn.execute('CREATE TABLE IF NOT EXISTS dados (valor TEXT)')
     conn.commit()
     conn.close()
-    print('banco de dados iniciado')
+    print('banco de dados iniciado' + 20* '-')
 
 if __name__ == '__main__':
-    init_db
+    init_db()

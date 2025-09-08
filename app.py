@@ -15,21 +15,23 @@ def enviar():
              valor_do_input = request.form['meu_input']
              NOME_SECRETO = os.environ.get('NOME_SECRETO', 'ikn')
              if valor_do_input == NOME_SECRETO:
-                  return redirect(url_for('secret'))
+                  return redirect(url_for('secret', nome=valor_do_input))
              else:
-                    return redirect(url_for('second'))
+                    return redirect(url_for('second', nome=valor_do_input))
         print(f"O usuário digitou: {valor_do_input}")
 
         return redirect(url_for('index'))
     
 @app.route("/secret")
 def secret():
-    return render_template("secret.html")
+    nome = request.args.get('nome')
+    return render_template("secret.html", nome=nome)
 
 @app.route("/second")
 def second():
-    return render_template("second.html")
-    
+    nome = request.args.get('nome')
+    return render_template("second.html", nome=nome)
+
 @app.route('/dados')
 def ver_dados():
     conn = get_db_connection()
