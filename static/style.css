@@ -7,7 +7,6 @@ body {
   background-color: #252424; 
 }
 
-
 .container {
     text-align: center; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -22,15 +21,8 @@ body.second {
 }
 
 body.secret {
-    background-color: #370a0a;
+    background-color: #a100ad;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:#370a0a;
-}
-
-body.dados {
-    background-color: #1a1a2e;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color:#e94560;
 }
