@@ -14,22 +14,29 @@ body {
 }
 
 body.second {
-    background-color: #129586;
     text-align: center;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background-color: #129586;
+}
+
+.container.second {
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#0a3d37;
 }
 
 body.secret {
-    background-color: #a100ad;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    text-align: center;
+    background-color: #a100ad;
+}
+.container.secret {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:#370a0a;
