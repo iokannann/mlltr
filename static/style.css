@@ -1,6 +1,6 @@
 body {
   display: flex;
-  flex-direction: row; 
+    flex-direction: column; 
   justify-content: center; 
   align-items: center; 
   min-height: 100vh; 
@@ -18,7 +18,8 @@ body {
 body.second {
     text-align: center;
     justify-content: center;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     margin: 0;
@@ -34,12 +35,13 @@ body.second {
 
 body.secret {
     justify-content: center;
-    flex-direction: row;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     text-align: center;
     background-color: #a100ad;
+    display: flex;
+    flex-direction: column;
 }
 .container.secret {
     text-align: center;
