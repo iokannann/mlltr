@@ -49,3 +49,58 @@ body.secret {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:#370a0a;
 }
+
+/* --- Curtain Animation --- */
+.curtain-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    pointer-events: auto;
+}
+.curtain {
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    background: #370a0a;
+    transition: transform 1.2s cubic-bezier(.77,0,.18,1);
+}
+.curtain.left {
+    left: 0;
+    border-right: 2px solid #fff;
+    transform: translateX(0);
+}
+.curtain.right {
+    right: 0;
+    border-left: 2px solid #fff;
+    transform: translateX(0);
+}
+.curtain.open.left {
+    transform: translateX(-100vw);
+}
+.curtain.open.right {
+    transform: translateX(100vw);
+}
+.curtain-btn {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1100;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    background: #fff;
+    color: #370a0a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.curtain-container.open {
+    pointer-events: none;
+}
+@media (max-width: 600px) {
+    .curtain { width: 55vw; }
+}
