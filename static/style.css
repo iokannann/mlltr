@@ -10,6 +10,7 @@ body {
 
 .container {
     text-align: center; 
+    flex-direction: row; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ffffff;
 }
@@ -17,6 +18,7 @@ body {
 body.second {
     text-align: center;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     min-height: 100vh;
     margin: 0;
@@ -25,12 +27,14 @@ body.second {
 
 .container.second {
     text-align: center;
+    flex-direction: row;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#0a3d37;
 }
 
 body.secret {
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     min-height: 100vh;
     margin: 0;
@@ -39,6 +43,7 @@ body.secret {
 }
 .container.secret {
     text-align: center;
+    flex-direction: row;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:#370a0a;
 }
